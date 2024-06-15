@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bg-color1 {
+    background-color: #1e202b;
+}
+
+.bg-color2 {
+    background-color: #323544;
+}
+
+.bg-color3 {
+    background-color: #262936;
+}
+
+.text-color {
+    color: #bfc1c8;
+}
+
+.link-color {
+    color: #009ad8;
+}
+
+/* ==== Google Fonts ==== */
+
+/* ===== Navbar ===== */
+
+.nav-item .nav-home {
+    border: 1px solid #009ad8;
+    font-size: 14px;
+    padding: 0 10px;
+    margin: 0 5px;
+}
+
+.nav-item .navbar-links {
+    padding: 0 10px;
+    border: 1px solid transparent;
+    padding: 0 10px;
+    color: white;
+    font-size: 14px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+.nav-item .navbar-links:hover{
+    border: 1px solid #009ad8;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.nav-link {
+    color: white;
+    transition: 0.2s;
+}
+.nav-link:hover {
+    color:#009ad8;
+}
+
+/* ======= Main ======= */
+
+.main {
+    background-image: url(../images/banner.png);
+    /* background-position: center; */
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    color: #bfc1c8;
+}
+
+.buttonNinput {
+    top: 6px;
+    right: 6px;
+}
+
+#cityName {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+#tempreture {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+/* ====== Footer ====== */
+
+/* .search-bar .form-control {
+    border: 2px solid #1e202b;
+} */
+
+.search-bar .form-control:focus {
+    border: none;
+    outline: 0;
+    box-shadow: 0 0 0 1px #009ad8;
+    background-color: #1e202b;
+    color: white;
+}
+
+.foot-icon {
+    width: 40px ;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.foot-icon:hover {
+    color: white;
+    background-color: #009ad8;
+}
+
+/* ===== Contacts ====== */
+
+.contacts-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.contacts-links a:hover {
+    text-decoration: underline;
+}
+
+.contacts-links {
+    font-size: 12px;
+}
+
+#contact-link {
+    color: #009ad8;
+}
+
+/* ===== Form ===== */
+
+form input:hover {
+    border: 1px solid #009ad8;
+}
+
+form textarea:hover {
+    border: 1px solid #009ad8;
+}
+
+.form-control:focus {
+    border: none;
+    outline: 0;
+    box-shadow: 0 0 0 1px #009ad8;
+}
+
+input::-webkit-input-placeholder {
+    color: #bfc1c8 !important;
+}
+
+input:-moz-placeholder {
+    color: #bfc1c8 !important;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #bfc1c8 !important;
+}
+
+textarea:-moz-placeholder {
+    color: #bfc1c8 !important;
+}

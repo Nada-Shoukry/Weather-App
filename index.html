@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App - Assignment 12</title>
+
+  <!-- ==== Google Fonts ==== -->
+
+  <!-- ==== Font Awesome & Bootstrap CSS ==== -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-color1">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <div class="d-flex flex-column">
+        <div>
+          <img class="w-50" src="images/logo@2x.png" alt="logo">
+        </div>
+
+        <div>
+          <h1 class="navbar-brand nav-logo" href="#">Weather</h1>
+        </div>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <div class="nav-home rounded-pill me-2">
+              <a class="nav-link active text-info" aria-current="page" href="#">Home</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="navbar-links rounded-pill">
+              <a class="nav-link" href="#">News</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="navbar-links rounded-pill">
+              <a class="nav-link" href="#">Live Cameras</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="navbar-links rounded-pill">
+              <a class="nav-link" href="#">Photos</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="navbar-links rounded-pill ">
+              <a class="nav-link" href="contact.html">Contacts</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="dispaly-weather main text-center">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="search-bar">
+            <div class="position-relative">
+              <input id="searchLocation" type="text" class="form-control rounded-5 py-3 px-4 my-5 bg-color1 border-0" placeholder="Find Your Location">
+              <div class="buttonNinput position-absolute">
+                <button id="findWeather" class="btn btn-info rounded-pill text-white px-5 py-2">Find</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+
+      <div class="row cards my-5 gy-3 mx-1">
+
+        <!-- Today -->
+        <div class="card1 col-lg-4 bg-color2">
+          <div class="d-flex flex-column">
+            <div class="date-time d-flex justify-content-around px-2 py-3 bg-color3 mb-5">
+              <div id="todayName" class="day"></div>
+              <div id="todayDate" class="date"></div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center text-white mb-4">
+              <div id="cityName" class="me-3"></div>
+              <div>
+                <img id="status-icon" class="icon mx-2" src="" alt="status-icon">
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center">
+              <p id="tempreture"></p>
+              <p id="weather-status" class="text-info"></p>
+            </div>
+            <div class="d-flex justify-content-around my-4">
+              <div id="humidity"><i class="fa-solid fa-umbrella text-white me-1"></i></div>
+              <div id="wind"><i class="fa-solid fa-wind text-white me-1"></i></div>
+              <div id="direction"><i class="fa-regular fa-compass text-white me-1"></i></div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Tomorrow -->
+        <div class="card2 col-lg-4 bg-color3">
+          <div class="d-flex flex-column">
+            <div class="date-time d-flex justify-content-around px-2 py-3 bg-color2 mb-5">
+              <div id="tomorrowName" class="day"></div>
+              <div id="tomorrowDate" class="date"></div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center text-white mt-3 mb-4">
+              <img id="tomorrow-status" src="" alt="status-icon">
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center my-1">
+              <div class="mt-1">
+                <span id="tMaxTemp" class="fs-2 fw-bold"></span>
+                <span> - </span>
+                <span id="tMinTemp" class="fs-3 fw-bold"></span>
+              </div>
+              <div class="mt-4">
+                <p id="tWeather" class="text-info"></p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-around my-4">
+            </div>
+          </div>
+        </div>
+  
+        <!-- After Tomorrow -->
+        <div class="card3 col-lg-4 bg-color2">
+          <div class="d-flex flex-column">
+            <div class="date-time d-flex justify-content-around px-2 py-3 bg-color3 mb-5">
+              <div id="afterTName" class="day">Thursday</div>
+              <div id="afterTDate" class="date">6/12</div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center text-white mt-3 mb-4">
+              <img id="afterT-status" src="" alt="status-icon">
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center my-1">
+              <div class="mt-1">
+                <span id="maxTempAfterT" class="fs-2 fw-bold"> 25 C</span>
+                <span> - </span>
+                <span id="minTempAfterT" class="fs-3 fw-bold"> 25 C</span>
+              </div>
+              <div class="mt-4">
+                <p id="weatherAfterT" class="text-info">clear</p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-around my-4">
+              <!-- <div id="humidityAfterT"><i class="fa-solid fa-umbrella text-white me-1"></i> percent</div>
+              <div id="windAfterT"><i class="fa-solid fa-wind text-white me-1"></i> km/h</div>
+              <div id="directionAfterT"><i class="fa-regular fa-compass text-white me-1"></i> East</div> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-color2 text-color py-5">
+    <div class="container">
+      <div class="row gy-3 ">
+        <div class="col-md-8">
+          <div class="search-bar">
+            <div class="position-relative">
+              <input type="text" class="form-control rounded-5 py-3 px-4 bg-color1 border-0" placeholder="Enter Your Email or Subscribe">
+              <div class="position-absolute buttonNinput">
+                <button class="btn btn-info rounded-pill py-2 px-3 text-white">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 ms-auto">
+          <div class="d-flex text-info mt-2">
+            <div class="foot-icon d-flex justify-content-center align-items-center rounded-circle bg-color3 mx-2"><i class="fa-brands fa-facebook-f"></i></div>
+            <div class="foot-icon d-flex justify-content-center align-items-center rounded-circle bg-color3 mx-2"><i class="fa-brands fa-twitter"></i></div>
+            <div class="foot-icon d-flex justify-content-center align-items-center rounded-circle bg-color3 mx-2"><i class="fa-brands fa-google-plus-g"></i></div>
+            <div class="foot-icon d-flex justify-content-center align-items-center rounded-circle bg-color3 mx-2"><i class="fa-brands fa-pinterest"></i></div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="mt-4 ms-1">
+        <p>Copyright &copy; 2014. Designed by Nada. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==== Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
